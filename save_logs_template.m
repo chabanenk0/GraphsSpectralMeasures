@@ -1,4 +1,4 @@
-function save_logs_template (baselogfile,i,degr,gr_sp,FiedVectn, Eigence); % При добавлении новой меры, нужно добавить ее в параметры (через запятую в скобках)
+function save_logs_template (baselogfile,i,degr,gr_sp,FiedVectn, Eigence,gr_sp_adj); % При добавлении новой меры, нужно добавить ее в параметры (через запятую в скобках)
 % Функция сохранения (дополнения) логов для локальных мер (тех, что выдают
 % характеристику для каждого значения.
 % i - 
@@ -22,3 +22,5 @@ logfile=strrep(baselogfile,'.txt','_Eigence.txt'); % тут задается имя файла-резу
 save_log_series(logfile,i,Eigence); % вызывается функция для вывода матрицы в указанный файл (она аналогичная для любой меры)
 
 
+logfile=strrep(baselogfile,'.txt','_GrSpec_adjmatr.txt'); % тут задается имя файла-результат
+save_log_series(logfile,i,gr_sp_adj); % вызывается функция для вывода матрицы в указанный файл (она аналогичная для любой меры)

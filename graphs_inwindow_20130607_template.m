@@ -1,4 +1,4 @@
-filename='dj_19_10_1987.txt';
+filename='tcp.txt';
 y=dlmread(filename);
 n=length(y);
 wind=500;
